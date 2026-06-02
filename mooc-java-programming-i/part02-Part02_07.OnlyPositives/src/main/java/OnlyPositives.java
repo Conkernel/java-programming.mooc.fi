@@ -16,10 +16,8 @@ public class OnlyPositives {
                 continue;
             } else if (num == 0){
                 break;
-            } else {
-                System.out.println(squar);
-                continue;
             }
+            System.out.println(squar);
         }
     }
 }
