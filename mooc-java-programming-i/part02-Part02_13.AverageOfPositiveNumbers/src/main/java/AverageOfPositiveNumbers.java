@@ -6,25 +6,24 @@ public class AverageOfPositiveNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double aver = 0;
         int sum = 0;
-        int count = 0;
-
+        double count = 0;
+        
         while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
-            if (count == 0 && number == 0) {
-                System.out.println("Cannot calculate the average");
-                break;
-            } else if (count != 0) {
-                if (number > 0) {
-                    count ++;
-                    sum = sum + number;
-                    aver = sum / count;
-                } else if (number == 0) {
-                    System.out.println(aver);
-                    break;
-                }
-            }
+            System.out.println("Give a number:");
+            int in = Integer.valueOf(scanner.nextLine());
+            if (in == 0) {
+                break ;
+            } else if (in > 0) {
+                sum += in;
+                count ++ ;
+            } 
+        }
+        if (sum > 0) {
+            double avg = sum/count ;
+            System.out.println("Average of the numbers: "+avg);
+        } else {
+            System.out.println("Cannot calculate the average");
         }
     }
 }
